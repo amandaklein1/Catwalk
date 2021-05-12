@@ -11,6 +11,7 @@ module.exports = {
     join skus on (styles.id = skus.styleId)
     where styles.productId = (?)
     group by styles.id`;
+
     db.query(queryStr, params, (err, results) => {
 
       var colors = results.map((object) => {
@@ -31,8 +32,6 @@ module.exports = {
 
      }
 
-
-      console.log("this is my results: ", results.defaultStyle)
       callback(err, product)
     });
   }

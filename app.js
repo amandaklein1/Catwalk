@@ -20,10 +20,6 @@ app.use(express.json());
 // Set up our routes
 app.use('/products', router);
 
-// Serve the client files
-// app.use(express.static(__dirname + '../hrnyc34-fec-falcullele/my-app/src/index.tsx'));
-
-
 // If run directly, run the server.
 if (!module.parent) {
   app.listen(app.get('port'));

@@ -10,6 +10,7 @@ module.exports = {
     from products join features on (products.id = features.productId)
     where products.id = (?)
     group by products.id`;
+
     db.query(queryStr, params, (err, results) => {
 
      var product = results.map((object) => {
@@ -24,7 +25,6 @@ module.exports = {
        }
       })
 
-      console.log("this is my results: ", product)
       callback(err, product)
     });
   }
