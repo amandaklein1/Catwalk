@@ -5,10 +5,10 @@ var pass = require('../config.js')
 
 // create the connection to database
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
+  host: '18.216.254.112',
+  user: 'amanda',
   password: pass,
-  database: 'projectRunway'
+  database: 'projectRunwayTest'
 });
 
 
