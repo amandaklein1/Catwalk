@@ -12,6 +12,7 @@ module.exports = {
     group by products.id`;
 
     db.query(queryStr, params, (err, results) => {
+      console.log('this is my result: ', results)
 
      var product = results.map((object) => {
        return {
